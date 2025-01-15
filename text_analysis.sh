@@ -14,6 +14,10 @@ if [ ! -f "$filename" ]; then
     exit 1
 fi
 
+# function to count the number of unique words
+count_unique_words() {
+    tr -cs '[:alpha:]' '\n' < "$filename" | sort | uniq | wc -l
+}
 # function to count word frequencies
 count_word_frequencies() {
     echo "---Count of Word Frequencies---"
@@ -27,5 +31,4 @@ count_char_frequencies() {:
     # uniq -c prefixes each character with count
     tr -cs '[:alpha]' '\n' < "$filename" | tr '[:upper:]' '[:lower:]' | grep -o . | sort | uniq -c | sort -nr
 }
-
 
