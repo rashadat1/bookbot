@@ -85,9 +85,9 @@ export_results() {
 
 # Main: Prompt the user for analysis options
 echo "Choose an analysis type"
-echo "1. Character analysis"
+echo "1. Character Analysis"
 echo "2. Word Analysis"
-echo "3. Both"
+echo "3. Both Character and Word Analysis"
 read -p "Choice(1/2/3): " analysis_choice
 
 # Perform the chosen analysis (character or word or both)
